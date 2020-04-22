@@ -114,4 +114,11 @@ ul, ol{
             }
         }
     }
+    &.footer-container {
+        text-align: right;
+        padding-bottom: 0;
+        h6 {
+            font-size: 10px;
+        }
+    }
 }
