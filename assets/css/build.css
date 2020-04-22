@@ -752,16 +752,10 @@ ul, ol {
     margin-left: 0;
   }
 }
-.section.account-container .total-amount-container {
-  margin-top: 12.5em;
+.section.total-amount-container {
   text-align: center;
 }
-@media only screen and (max-width: 991px) {
-  .section.account-container .total-amount-container {
-    margin-top: 100px;
-  }
-}
-.section.account-container .total-amount-container h2, .section.account-container .total-amount-container h6, .section.account-container .total-amount-container h3 {
+.section.total-amount-container h2, .section.total-amount-container h6, .section.total-amount-container h3 {
   margin: 0;
 }
 .section.form-link-container {
