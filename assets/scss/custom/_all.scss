@@ -1,0 +1,49 @@
+// Functions for px to em conversion
+$browser-context: 16; // Default
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+}
+
+@function px($pixels, $context: $browser-context) {
+    @return #{$pixels/$context};
+}
+
+// Mixins for default styles 
+
+$base : 16;
+$base-height : 22.5;
+
+
+@mixin textStyle( $color , $size: $base, $lspace, $lheight: $base-height , $weight: normal ) {
+    color: $color;
+    font-size: em($size);
+    letter-spacing: #{$lspace/$base}em;
+    line-height:  $lheight/$size;
+    font-weight: $weight;
+}
+
+@mixin bgSettings($size , $repeat , $position , $width , $height) {
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $position;
+    width: em($width);
+    height: em($height)
+}
+
+
+/////////////////////////////////////////
+
+
+@import "components/colors";
+@import "components/typography";
+
+@import "components/button";
+
+@import "components/header";
+@import "components/footer";
+@import "components/owlcarousel";
+
+
+
+
+@import "components/global";
