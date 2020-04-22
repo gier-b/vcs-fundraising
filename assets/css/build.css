@@ -403,6 +403,28 @@ p, a, h5, h6 {
   font-family: "Montserrat", sans-serif;
 }
 
+.btn {
+  padding: 0.625em 0.9375em;
+  outline: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+.btn.btn-register {
+  color: #0a0a0a;
+  background-color: transparent;
+  border: 1px solid #0a0a0a;
+  transition: all, 0.3s;
+}
+.btn.btn-register:hover, .btn.btn-register:active {
+  color: #f3f3f3;
+  background-color: #0a0a0a;
+  border: 1px solid white;
+}
+
 /**
  * Owl Carousel v2.3.4
  * Copyright 2013-2018 David Deutsch
@@ -638,15 +660,104 @@ p, a, h5, h6 {
   width: 100%;
 }
 
-body {
-  font-size: 16px;
-}
-
-b, strong {
-  font-weight: bold;
-}
-
 * {
-  outline: none !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.171vw;
+  background-color: #f3f3f3;
+  margin: 0;
+}
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+p, a, li {
+  font-size: 1em;
+  color: #0a0a0a;
+  margin: 0;
+}
+
+ul, ol {
+  margin: 0;
+}
+
+.animated .animated-child {
+  opacity: 0;
+  transform: translateY(-15px);
+}
+
+.section {
+  text-align: center;
+  padding: 1.5625em;
+}
+.section.main-content-container .content-wrapper p {
+  margin-bottom: 1.25em;
+}
+.section.account-container .account-wrapper {
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 991px) {
+  .section.account-container .account-wrapper {
+    flex-direction: column;
+  }
+}
+.section.account-container .account-wrapper .qr-img-wrapper {
+  width: calc(50% - 1.5625em);
+  text-align: right;
+}
+@media only screen and (max-width: 991px) {
+  .section.account-container .account-wrapper .qr-img-wrapper {
+    text-align: center;
+    width: 100%;
+  }
+}
+.section.account-container .account-wrapper .qr-img-wrapper img {
+  object-fit: cover;
+  width: 15.625em;
+  height: 15.625em;
+}
+.section.account-container .account-wrapper .bank-wrapper {
+  text-align: left;
+  margin-left: 1.5625em;
+  width: calc(50% - 1.5625em);
+}
+@media only screen and (max-width: 991px) {
+  .section.account-container .account-wrapper .bank-wrapper {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+.section.account-container .total-amount-container {
+  margin-top: 12.5em;
+  text-align: center;
+}
+@media only screen and (max-width: 991px) {
+  .section.account-container .total-amount-container {
+    margin-top: 100px;
+  }
+}
+.section.account-container .total-amount-container h2, .section.account-container .total-amount-container h6, .section.account-container .total-amount-container h3 {
+  margin: 0;
+}
+.section.form-link-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+@media only screen and (max-width: 991px) {
+  .section.form-link-container {
+    padding-bottom: 75px;
+  }
+}
+.section.form-link-container .form-link-wrapper p {
+  margin-bottom: 1.25em;
 }
 /*# sourceMappingURL=build.css.map */

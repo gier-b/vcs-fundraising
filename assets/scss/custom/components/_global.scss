@@ -1,13 +1,103 @@
 
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
 
 body {
-    font-size: 16px;
+    font-size: 1.171vw;
+    background-color: $white;
+    margin: 0;
+    @media only screen and (max-width: 1024px){
+        font-size: 16px;
+    }
 }
 
-b, strong {
-    font-weight:bold;
+p , a , li {
+    font-size: em(16);
+    color: $black;
+    margin: 0;
 }
 
-* {
-    outline: none !important;
+ul, ol{
+    margin: 0;
+}
+
+.animated {
+    .animated-child {
+        opacity: 0;
+        transform : translateY(-15px)
+    }
+}
+
+
+.section {
+    text-align: center;
+    padding: em(25);
+    &.main-content-container {
+        .content-wrapper {
+            p {
+                margin-bottom: em(20);
+            }
+        }
+    }
+    &.account-container {
+        .account-wrapper {
+            display: flex;
+            align-items: center;
+            @media only screen and (max-width: 991px){
+                flex-direction: column;
+            }
+            .qr-img-wrapper {
+                width: calc(50% - 1.5625em);
+                text-align: right;
+                @media only screen and (max-width: 991px){
+                    text-align: center;
+                    width: 100%;
+                }
+                img {
+                    object-fit: cover;
+                    width: em(250);
+                    height: em(250);
+                }
+            }
+            .bank-wrapper {
+                text-align: left;
+                margin-left: em(25);
+                width: calc(50% - 1.5625em);
+                @media only screen and (max-width: 991px){
+                    text-align: center;
+                    width: 100%;
+                    margin-left: 0;
+                }
+                .bank-items {
+
+                }
+            }
+        }
+        .total-amount-container {
+            margin-top: em(200);
+            text-align: center;
+            @media only screen and (max-width: 991px){
+                margin-top: 100px;
+            }
+            h2, h6, h3 {
+                margin: 0;
+            }
+        }
+    }
+    &.form-link-container {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        @media only screen and (max-width: 991px){
+            padding-bottom: 75px;
+        }
+        .form-link-wrapper {
+            p {
+                margin-bottom: em(20);
+            }
+        }
+    }
 }
