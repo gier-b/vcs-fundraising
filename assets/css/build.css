@@ -771,4 +771,11 @@ ul, ol {
 .section.form-link-container .form-link-wrapper p {
   margin-bottom: 1.25em;
 }
+.section.footer-container {
+  text-align: right;
+  padding-bottom: 0;
+}
+.section.footer-container h6 {
+  font-size: 10px;
+}
 /*# sourceMappingURL=build.css.map */
