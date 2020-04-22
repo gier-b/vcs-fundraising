@@ -696,6 +696,23 @@ ul, ol {
   text-align: center;
   padding: 1.5625em;
 }
+.section.section-banner-container .banner-style {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 28.125em;
+}
+@media only screen and (max-width: 767px) {
+  .section.section-banner-container .banner-style {
+    height: 125px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .section.main-content-container .header-wrapper h1 {
+    margin-top: 0;
+  }
+}
 .section.main-content-container .content-wrapper p {
   margin-bottom: 1.25em;
 }
