@@ -1,0 +1,22 @@
+.btn {
+    padding: em(10) em(15);
+    outline: none;
+    border-radius:  5px;
+    text-align: center;
+    font-size: em(16);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    &.btn-register {
+        color: $black;
+        background-color: transparent;
+        border: 1px solid $black;
+        transition: all , .3s;
+        &:hover, &:active {
+            color: $white;
+            background-color: $black;
+            border: 1px solid white;
+        }
+    }
+
+}
