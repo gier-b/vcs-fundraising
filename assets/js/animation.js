@@ -5,6 +5,7 @@
   
 	Animation.prototype.init = function() {
         Animation.prototype.inView();
+        Animation.prototype.scrollDownAnimation();
 	};
 
     Animation.prototype.inView = function() {
@@ -17,6 +18,14 @@
                 }
             }
         });
+    }
+
+    Animation.prototype.scrollDownAnimation = function() {
+        $(".register-link").on("click", function(e){
+            e.preventDefault();
+            var position = $("#register").offset().top;
+            $('body,html').animate({ scrollTop: position}, 800);
+        })
     }
 
     app.Animation = Animation;
