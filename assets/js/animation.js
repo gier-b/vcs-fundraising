@@ -6,6 +6,7 @@
 	Animation.prototype.init = function() {
         Animation.prototype.inView();
         Animation.prototype.scrollDownAnimation();
+        Animation.prototype.nextPageAnimation();
 	};
 
     Animation.prototype.inView = function() {
@@ -25,6 +26,19 @@
             e.preventDefault();
             var position = $("#register").offset().top;
             $('body,html').animate({ scrollTop: position}, 800);
+        })
+    }
+
+    Animation.prototype.nextPageAnimation = function() {
+        var p1 =  $(".page-one");
+        var p2 = $(".page-two")
+        var tl = new TimelineMax();
+        $(".btn-link").on("click" , function(){
+            
+            tl.to(p1 , 0.4 , {y : -999, opacity: 0, ease: Expo.easeIn})
+              .to(p1, 0 , {display: "none"})
+              .to(p2 , 0.4 , {display: "block" , y: 0 , opacity: 1 , ease: Expo.easeOut})
+
         })
     }
 

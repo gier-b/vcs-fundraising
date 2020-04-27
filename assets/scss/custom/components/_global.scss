@@ -122,3 +122,15 @@ ul, ol{
         }
     }
 }
+
+
+.page {
+    &.page-one {
+
+    }
+    &.page-two {
+        display: none;
+        opacity: 0;
+        transform: translateY(999px);
+    }
+}
