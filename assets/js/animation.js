@@ -37,7 +37,20 @@
             
             tl.to(p1 , 0.4 , {y : -999, opacity: 0, ease: Expo.easeIn})
               .to(p1, 0 , {display: "none"})
-              .to(p2 , 0.4 , {display: "block" , y: 0 , opacity: 1 , ease: Expo.easeOut})
+              .to("body", 0.4 , {y: 0})
+              .to(p2 , 0.4 , {display: "block" , y: 0 , opacity: 1 , ease: Expo.easeOut, onComplete: function(){
+            
+              }})
+
+        })
+        $(".btn-goback").on("click" , function(){
+            
+            tl.to(p2 , 0.4 , {y : 999, opacity: 0, ease: Expo.easeIn})
+              .to(p2, 0 , {display: "none"})
+              .to("body", 0.4 , {y: 0})
+              .to(p1 , 0.4 , {display: "block" , y: 0 , opacity: 1 , ease: Expo.easeOut, onComplete: function(){
+            
+              }})
 
         })
     }

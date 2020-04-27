@@ -18,12 +18,13 @@
             border: 1px solid white;
         }
     }
-    &.btn-link {
+    &.btn-link, &.btn-goback {
         display: block;
         border: none;
         text-decoration: underline;
         font-size: em(12);
-        margin: em(15) auto;
+        margin: em(25) auto;
+        background: none;
     }
 
 }
