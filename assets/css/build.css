@@ -593,7 +593,7 @@ h1, h2, h3, h4 {
   font-family: "Raleway", sans-serif;
 }
 
-p, a, h5, h6 {
+p, a, h5, h6, span {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -1027,6 +1027,11 @@ ul, ol {
 .section.section-transaction-container .section-transaction-wrapper .proof-container .proof-wrapper .item:hover, .section.section-transaction-container .section-transaction-wrapper .proof-container .proof-wrapper .item:active {
   transform: scale(1.1);
 }
+@media only screen and (max-width: 767px) {
+  .section.section-transaction-container .section-transaction-wrapper .proof-container .proof-wrapper .item:hover, .section.section-transaction-container .section-transaction-wrapper .proof-container .proof-wrapper .item:active {
+    transform: scale(1.03);
+  }
+}
 .section.section-transaction-container .section-transaction-wrapper .proof-container .proof-wrapper .item:last-child {
   margin-right: 0;
 }
@@ -1037,7 +1042,7 @@ ul, ol {
   height: 15.625em;
   border: 1px solid #0a0a0a;
 }
-.section.section-transaction-container .section-transaction-wrapper .proof-container .proof-notif-wrapper {
+.section.section-transaction-container .section-transaction-wrapper .proof-notif-wrapper {
   margin-top: 2.1875em;
   text-align: center;
 }
@@ -1048,32 +1053,30 @@ ul, ol {
   transform: translateY(999px);
 }
 
-.owl-stage {
-  display: flex;
-  align-items: center;
+#lightbox {
+  font-size: 1.171vw;
+  margin: 0;
+  top: 50% !important;
+  transform: translateY(-50%);
 }
-
-.owl-nav {
+@media only screen and (max-width: 1024px) {
+  #lightbox {
+    font-size: 16px;
+  }
+}
+#lightbox .lb-number {
+  font-size: 1em;
+  margin-top: 1.5625em;
+  letter-spacing: 0.1em;
+  color: #f3f3f3;
+}
+#lightbox .lb-data .lb-closeContainer {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: -2.5em;
+  right: 1%;
+}
+#lightbox .lb-data .lb-details {
+  text-align: center;
   width: 100%;
-}
-.owl-nav button {
-  outline: none;
-  position: absolute;
-  font-size: 7.8125em !important;
-  line-height: 0.1 !important;
-  transition: opacity 0.5s;
-}
-.owl-nav button:hover, .owl-nav button:active {
-  opacity: 0.7;
-}
-.owl-nav .owl-prev {
-  left: 0;
-}
-.owl-nav .owl-next {
-  right: 0;
 }
 /*# sourceMappingURL=build.css.map */

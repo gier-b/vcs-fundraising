@@ -27,6 +27,16 @@
             var position = $("#register").offset().top;
             $('body,html').animate({ scrollTop: position}, 800);
         })
+        $(".item").map(function(){
+            var _this = $(this);
+
+            _this.on("click", function(){
+                if($(window).outerWidth() < 767){
+                    $('body,html').animate({ scrollTop: $(window).outerHeight()/ 1.1}, 800);
+                }
+
+            })
+        })
     }
 
     Animation.prototype.nextPageAnimation = function() {

@@ -160,6 +160,9 @@ ul, ol{
                         cursor: pointer;
                         &:hover, &:active {
                             transform: scale(1.1);
+                            @media only screen and (max-width: 767px){
+                                transform: scale( 1.03)
+                            }
                         }
                         &:last-child {
                             margin-right: 0;
@@ -174,10 +177,10 @@ ul, ol{
                     }
                     
                 }
-                .proof-notif-wrapper {
-                    margin-top: em(35);
-                    text-align: center;
-                }
+            }
+            .proof-notif-wrapper {
+                margin-top: em(35);
+                text-align: center;
             }
         }
     }
@@ -196,32 +199,30 @@ ul, ol{
 }
 
 
-.owl-stage {
-    display: flex;
-    align-items: center;
-    
-}
 
-.owl-nav {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    button {
-        outline: none;
-        position: absolute;
-        font-size: em(125) !important;
-        line-height: .1 !important;
-        transition: opacity .5s;
-        &:hover, &:active {
-            opacity: .7;
+#lightbox {
+    font-size: 1.171vw;
+    margin: 0;
+    top: 50% !important;
+    transform: translateY(-50%);
+    @media only screen and (max-width: 1024px){
+        font-size: 16px;
+    }
+    .lb-number {
+        font-size: em(16);
+        margin-top: em(25);
+        letter-spacing: .1em;
+        color: $white;
+    }
+    .lb-data {
+        .lb-closeContainer {
+            position: absolute;
+            top: em(-40);
+            right: 1%;
         }
-    }
-    .owl-prev {
-        left: 0;
-    }
-    .owl-next {
-        right: 0;
+        .lb-details {
+            text-align: center;
+            width: 100%;
+        }
     }
 }
